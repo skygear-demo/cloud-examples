@@ -1,0 +1,6 @@
+cf:
+  function1:
+    type: http-handler
+    path: /hello-world
+    env: node
+    src: hello-world

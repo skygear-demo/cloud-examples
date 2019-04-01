@@ -1,0 +1,12 @@
+[
+    {
+        "name": "Empty",
+        "path": "empty",
+        "description": "Skygear app config without cloud code"
+    },
+    {
+        "name": "Node.js Example",
+        "path": "nodejs-example",
+        "description": "Skygear node.js example"
+    }
+]
