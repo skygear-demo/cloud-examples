@@ -1,6 +1,7 @@
-cf:
-  function1:
-    type: http-handler
-    path: /hello-world
-    env: node
-    src: hello-world
+deployments:
+  frontend:
+    type: http-service
+    context: frontend
+    template: nodejs:12
+    path: /
+    port: 8080
