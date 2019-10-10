@@ -1,6 +1,6 @@
-skygear.defaultContainer.configure({
-  endpoint: 'CHANGE_TO_YOUR_APPS_ENDPOINT',
-  apiKey: 'CHANGE_TO_YOUR_APPS_API_KEY'
+skygear.configure({
+  endpoint: '<INSERT API ENDPOINT HERE>',
+  apiKey: '<INSERT API KEY HERE>'
 });
 
 function goToIndex() {
