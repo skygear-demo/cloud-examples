@@ -18,7 +18,7 @@ function AuthForm() {
     <form className="AuthForm" onSubmit={onFormSubmit}>
       <div className="AuthForm-field">
         <label htmlFor="username" className="AuthForm-label">Name:</label>
-        <input type="text" id="username" className="AuthForm-input" minLength={8} value={username} onChange={onUsernameChange} />
+        <input type="text" id="username" className="AuthForm-input" minLength={3} value={username} onChange={onUsernameChange} />
       </div>
       <div className="AuthForm-field">
         <label htmlFor="password" className="AuthForm-label">Password:</label>
