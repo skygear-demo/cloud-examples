@@ -2,7 +2,9 @@ import React, { useState, useCallback } from 'react';
 import skygear, { SkygearError, SkygearErrorNames } from '@skygear/web';
 import './AuthForm.css';
 
-function AuthForm() {
+function AuthForm(props) {
+  const { onAuthStateChange } = props;
+
   const [username, setUsername] = useState("");
   const onUsernameChange = useCallback((e) => setUsername(e.target.value), []);
 
@@ -16,6 +18,7 @@ function AuthForm() {
 
     try {
       await skygear.auth.login(username, password);
+      onAuthStateChange();
       return;
     } catch (err) {
       // Display errors other than user not found.
@@ -27,11 +30,12 @@ function AuthForm() {
 
     try {
       await skygear.auth.signupWithUsername(username, password);
+      onAuthStateChange();
     } catch (err) {
       setError(String(err));
       return;
     }
-  }, [username, password]);
+  }, [username, password, onAuthStateChange]);
 
   return (
     <form className="AuthForm" onSubmit={onFormSubmit}>
