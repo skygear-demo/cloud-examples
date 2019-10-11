@@ -19,7 +19,7 @@ function AuthBadge(props) {
 
   return (
     <form className="AuthBadge" onSubmit={onLogout}>
-      <p className="AuthBadge-error">Welcome, {username}</p>
+      <p className="AuthBadge-badge">Welcome, {username}</p>
       <input type="submit" value="Logout" className="AuthBadge-logout" />
     </form>
   );

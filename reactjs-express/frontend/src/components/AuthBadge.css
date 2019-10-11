@@ -3,11 +3,15 @@
     align-items: center;
 }
 
+.AuthBadge-badge {
+    min-width: 20vw;
+}
+
 .AuthBadge-logout {
     font: inherit;
     border: 1px solid #808088;
     background: #303338;
     color: white;
     padding: 0.5rem 1rem;
-    margin-left: 5rem;
+    margin-left: 1rem;
 }
