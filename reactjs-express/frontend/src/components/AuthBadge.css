@@ -1,0 +1,13 @@
+.AuthBadge {
+    display: flex;
+    align-items: center;
+}
+
+.AuthBadge-logout {
+    font: inherit;
+    border: 1px solid #808088;
+    background: #303338;
+    color: white;
+    padding: 0.5rem 1rem;
+    margin-left: 5rem;
+}

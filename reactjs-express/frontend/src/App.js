@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import skygear, { SkygearError, SkygearErrorNames } from '@skygear/web';
 import AuthForm from './components/AuthForm';
+import AuthBadge from './components/AuthBadge';
 import './App.css';
 
 async function configureSkygear() {
@@ -44,7 +45,7 @@ function App() {
     <div className="App">
       {configured ?
         username ?
-          <p>Welcome, {username}</p> :
+          <AuthBadge onAuthStateChange={onAuthStateChange} username={username} /> :
           <AuthForm onAuthStateChange={onAuthStateChange} /> :
         null
       }
