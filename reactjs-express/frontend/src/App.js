@@ -32,9 +32,9 @@ function App() {
     configureSkygear().then(setConfigured);
   }, []);
 
-  const [username, setUsername] = useState(undefined);
+  const [username, setUsername] = useState("");
   const onAuthStateChange = useCallback(
-    () => setUsername(skygear.auth.currentIdentity && skygear.auth.currentIdentity.loginID),
+    () => setUsername(skygear.auth.currentIdentity ? skygear.auth.currentIdentity.loginID : ""),
     []);
   useEffect(() => {
     if (configured) {
