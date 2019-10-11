@@ -1,0 +1,24 @@
+.AuthForm-field {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 4vmin;
+}
+
+.AuthForm-input {
+    font: inherit;
+    width: 15vw;
+    margin-left: 2vmin;
+    border: 1px solid #808088;
+    background: #303338;
+    color: white;
+    padding: 0.5rem;
+}
+
+.AuthForm-submit {
+    font: inherit;
+    border: 1px solid #808088;
+    background: #303338;
+    color: white;
+    padding: 0.5rem 1rem;
+}
