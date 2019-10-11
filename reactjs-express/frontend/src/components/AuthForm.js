@@ -1,4 +1,5 @@
 import React, { useState, useCallback } from 'react';
+import skygear, { SkygearError, SkygearErrorNames } from '@skygear/web';
 import './AuthForm.css';
 
 function AuthForm() {
@@ -8,10 +9,28 @@ function AuthForm() {
   const [password, setPassword] = useState("");
   const onPasswordChange = useCallback((e) => setPassword(e.target.value), []);
 
-  const onFormSubmit = useCallback((e) => {
+  const [error, setError] = useState("");
+
+  const onFormSubmit = useCallback(async (e) => {
     e.preventDefault();
-    console.log(username, password);
-    // TODO: signup/login
+
+    try {
+      await skygear.auth.login(username, password);
+      return;
+    } catch (err) {
+      // Display errors other than user not found.
+      if (!(err instanceof SkygearError && err.name === SkygearErrorNames.ResourceNotFound)) {
+        setError(String(err));
+        return;
+      }
+    }
+
+    try {
+      await skygear.auth.signupWithUsername(username, password);
+    } catch (err) {
+      setError(String(err));
+      return;
+    }
   }, [username, password]);
 
   return (
@@ -24,6 +43,7 @@ function AuthForm() {
         <label htmlFor="password" className="AuthForm-label">Password:</label>
         <input type="password" id="password" className="AuthForm-input" minLength={8} value={password} onChange={onPasswordChange} />
       </div>
+      <p className="AuthForm-error">{error}</p>
       <input type="submit" value="Submit" className="AuthForm-submit" />
     </form>
   );

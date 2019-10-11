@@ -22,3 +22,8 @@
     color: white;
     padding: 0.5rem 1rem;
 }
+
+.AuthForm-error {
+    width: 100%;
+    overflow: scroll;
+}
