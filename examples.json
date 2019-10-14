@@ -13,5 +13,10 @@
         "name": "Node.js Blog Page Demo",
         "path": "nodejs-blog-demo",
         "description": "Demo using skygear to do a simple blog page in node.js"
+    },
+    {
+        "name": "Node.js React/Express Fortune App",
+        "path": "react-express-fortune",
+        "description": "Example Fortune App using ReactJS"
     }
 ]
