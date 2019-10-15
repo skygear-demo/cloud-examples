@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Empty",
+        "path": "empty",
+        "description": "Empty Skygear App"
+    },
+    {
+        "name": "Node.js Express",
+        "path": "nodejs-express",
+        "description": "Node.js with Express"
+    },
+    {
+        "name": "Node.js MongoDB Blog App",
+        "path": "nodejs-blog",
+        "description": "Blog app using Express & MongoDB"
+    },
+    {
+        "name": "Node.js React/Express Fortune App",
+        "path": "nodejs-fortune",
+        "description": "Fortune app using ReactJS & Express"
+    }
+]
