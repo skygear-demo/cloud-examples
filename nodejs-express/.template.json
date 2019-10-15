@@ -1,0 +1,7 @@
+{
+    "replaceAppName": {
+        "__APP_NAME__": [
+            "skygear.yaml"
+        ]
+    }
+}

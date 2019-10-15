@@ -1,0 +1,17 @@
+{
+    "replaceAppName": {
+        "__APP_NAME__": [
+            "skygear.yaml"
+        ]
+    },
+    "replaceAPIEndpoint": {
+        "__API_ENDPOINT__": [
+            "frontend/static/main.js"
+        ]
+    },
+    "replaceAPIKey": {
+        "__API_KEY__": [
+            "frontend/static/main.js"
+        ]
+    }
+}

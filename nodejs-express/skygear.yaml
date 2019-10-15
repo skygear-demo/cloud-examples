@@ -1,3 +1,5 @@
+app: __APP_NAME__
+
 deployments:
   frontend:
     type: http-service
