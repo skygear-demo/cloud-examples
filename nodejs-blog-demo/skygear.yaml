@@ -1,36 +1,19 @@
-
-cloudCode:
-  hello:
-    type: http-handler
-    path: /hello
-    env: nodejs
-    entry: hello
-    src: js
-  fetch_blogs:
-    type: http-handler
-    path: /fetch_blogs
-    env: nodejs
-    entry: fetch_blogs
-    src: js
-    secrets:
-        - MONGO_DB_URL
-  write_blog:
-    type: http-handler
-    path: /write_blog
-    env: nodejs
-    entry: write_blog
-    src: js
-    secrets:
-        - MONGO_DB_URL
-  after_signup:
-    type: http-handler
-    path: /after_signup
-    hook:
-      event: after_signup
-      async: true
-      timeout: 65
-    env: nodejs
-    entry: after_signup
-    src: js
+deployments:
+  backend:
+    type: http-service
+    context: backend
+    template: nodejs:12
+    path: /api
+    port: 8080
     secrets:
       - MONGO_DB_URL
+  frontend:
+    type: http-service
+    context: frontend
+    template: nodejs:12
+    path: /
+    port: 8080
+
+hooks:
+  - path: /api/after_user_create
+    event: after_user_create
