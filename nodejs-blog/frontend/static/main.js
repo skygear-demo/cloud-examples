@@ -1,6 +1,6 @@
 skygear.configure({
-  endpoint: '<INSERT API ENDPOINT HERE>',
-  apiKey: '<INSERT API KEY HERE>'
+  endpoint: '__API_ENDPOINT__',
+  apiKey: '__API_KEY__',
 });
 
 function goToIndex() {
