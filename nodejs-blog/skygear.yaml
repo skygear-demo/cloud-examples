@@ -7,8 +7,9 @@ deployments:
     template: nodejs:12
     path: /api
     port: 8080
-    secrets:
-      - MONGO_DB_URL
+    environment:
+    - name: MONGO_DB_URL
+      secret: MONGO_DB_URL
   frontend:
     type: http-service
     context: frontend
