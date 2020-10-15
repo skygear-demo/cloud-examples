@@ -1,9 +1,9 @@
 app: __APP_NAME__
+api_version: v2.3
 
 deployments:
-  frontend:
+  - name: server
     type: http-service
     context: frontend
-    template: nodejs:12
     path: /
     port: 8080
